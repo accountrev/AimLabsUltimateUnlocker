@@ -1,0 +1,745 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>AimLabsUltimateUnlocker_MelonLoader</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>AimLabsUltimateUnlocker_MelonLoader</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Examples.Genuine.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Genuine.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Examples.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppACTk.Examples.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppACTk.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Analytics">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Avro.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Avro.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.BugReporting">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.BugReporting.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Build">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Build.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Common">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Content.GraphQL">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Content.GraphQL.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Content.ScreenTransitions">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Content.ScreenTransitions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.ContentDelivery.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.ContentDelivery.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Contentful.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Contentful.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimlab.CrashReportHandler">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimlab.CrashReportHandler.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Database">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Database.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Debugging.Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Debugging.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.EasyMovieTexture">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.EasyMovieTexture.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Economy">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Economy.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.GraphQL.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL.Tests">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.GraphQL.Tests.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL.Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.GraphQL.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Localization">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Logging">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Logging.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Login">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Login.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Bindings">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.MainMenu.Bindings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Data">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.MainMenu.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.MainMenu.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Models">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Models.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Models.Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Models.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Platforms">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Platforms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Platforms.Steam">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Platforms.Steam.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Plugins">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.RemoteConfig.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.RemoteConfig.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.ROG">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.ROG.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Settings">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Settings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Tools">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.Tools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.UI.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.UI.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.WeaponDisplay.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAimLab.UI.WeaponDisplay.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAmplifyShaderEditor.Samples.BuiltIn">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAmplifyShaderEditor.Samples.BuiltIn.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAstarPathfindingProject">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAstarPathfindingProject.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAsyncAwaitUtil">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAsyncAwaitUtil.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAvro">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppAvro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBacktrace.Unity">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppBacktrace.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryRuntimeAssembly">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppBakeryRuntimeAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBitsplash.DataVisualizer.Core">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppBitsplash.DataVisualizer.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppChartAndGraph">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppChartAndGraph.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppColorPicker">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppColorPicker.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppconstants">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2Cppconstants.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppContentful">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppContentful.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCreatorStudio.Events">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCreatorStudio.Events.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCsWorkshop">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCsWorkshop.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Bots">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Bots.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Forms">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Forms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_FpsGame">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_FpsGame.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_GameEngine">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_GameEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_LevelEditor">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_LevelEditor.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Models">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Models.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Player">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Player.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Security">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Utilities">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppCS_Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppdataAcademyModel">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppdataAcademyModel.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppdataServicesCulture">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppdataServicesCulture.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDentedPixel.LeanTween">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppDentedPixel.LeanTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppdiscord.rpc.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2Cppdiscord.rpc.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTween">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppDOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTweenPro">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppDOTweenPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEasySave3">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppEasySave3.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppElringus.UnityGoogleDrive.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppElringus.UnityGoogleDrive.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEnhancedScroller">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppEnhancedScroller.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppGameTools">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppGameTools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppGraphAndChartUnityPlugin">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppGraphAndChartUnityPlugin.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppJWT">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppJWT.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppKlutch">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppKlutch.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLapinerTools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Steam.Shared">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLapinerTools.Steam.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Workshop.Data">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLapinerTools.Workshop.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Workshop.UI">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLapinerTools.Workshop.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLastAbyss.SimpleGraphQL.Plugins">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLastAbyss.SimpleGraphQL.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLastAbyss.SimpleGraphQL.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLastAbyss.SimpleGraphQL.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TranslucentImage">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLeTai.TranslucentImage.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TrueShadow.Demo">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLeTai.TrueShadow.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TrueShadow">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLeTai.TrueShadow.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLoadingScreenPro">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppLoadingScreenPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMathNet.Numerics">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppMathNet.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMessageHub">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppMessageHub.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMicrosoft.CSharp">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppMicrosoft.CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOSA">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppOSA.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppP2T">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppP2T.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.ClipperLib">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.ClipperLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Ionic.Zip.Reduced">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Poly2Tri">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPlayFab">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPlayFab.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPoolingAssembly">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPoolingAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppProgressBarPro">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppProgressBarPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPurchasing.Common">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppPurchasing.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Core">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppRewired_Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Windows">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppRewired_Windows.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Windows_Functions">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppRewired_Windows_Functions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSegment.Analytics">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSegment.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSimpleFileBrowser.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSimpleFileBrowser.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSimpleSQL_Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSimpleSQL_Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSonicBloom.Koreo">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSonicBloom.Koreo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSSM">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSSM.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.CodeDom">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.CodeDom.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Drawing">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Drawing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.IO.Compression.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Net.Http">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Net.Http.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Windows.Forms">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Windows.Forms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CpptaskModels">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CpptaskModels.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTNRD.Humanizr">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppTNRD.Humanizr.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppToucanSystems.SmartChart">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppToucanSystems.SmartChart.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUFPSGameProfile">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppUFPSGameProfile.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUIEffect">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppUIEffect.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUIShapes">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppUIShapes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWebViewRuntime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWebViewRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Common">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshop.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Platform">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshop.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Steam">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshop.Steam.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshopCache">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshopCache.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshopCache.LookupTables">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshopCache.LookupTables.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop_Content">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppWorkshop_Content.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppYoutubePlayer">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2CppYoutubePlayer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.003">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.InternalAPIEngineBridge.003.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.KdTree">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.KdTree.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.Poly2Tri">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.ProBuilder.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Configuration">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Device">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Device.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments.Internal">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Environments.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Internal">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Registration">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Registration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Scheduler">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Scheduler.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Telemetry">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Telemetry.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Threading">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Services.Core.Threading.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VectorGraphics">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\Unity.VectorGraphics.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleCore">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleMacosStub">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleStub">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.AppleStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.SecurityCore">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.SecurityStub">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.Stores">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.Stores.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.WinRTCore">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.WinRTStub">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityGoogleDrive.Newtonsoft.Json">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityGoogleDrive.Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="UnitySceneReference">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnitySceneReference.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityUIExtensions">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\Il2CppAssemblies\UnityUIExtensions.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\net6\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\net6\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>E:\SteamLibrary\steamapps\common\Aim Lab\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+		<Compile Include="UnlockPatch.cs" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;E:\SteamLibrary\steamapps\common\Aim Lab\Mods&quot;" />
+	</Target>
+</Project>
