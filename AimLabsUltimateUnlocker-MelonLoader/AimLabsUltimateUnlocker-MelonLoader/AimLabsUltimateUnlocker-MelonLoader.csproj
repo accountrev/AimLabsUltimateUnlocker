@@ -1,0 +1,749 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>AimLabsUltimateUnlocker_MelonLoader</RootNamespace>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>AimLabsUltimateUnlocker_MelonLoader</AssemblyName>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup>
+		<Reference>
+			<Private>false</Private>
+		</Reference>
+	</ItemDefinitionGroup>
+
+	<!-- THIS IS REQUIRED TO FIND AIM LABS FOR BUILDING -->
+	<Import Project="Local.props" Condition="Exists('AimLabsDirectory.props')" />
+
+	<!-- IF THE FILE DOESNT EXIST, IT WILL USE DEFAULT STEAM DIRECTORY -->
+	<PropertyGroup>
+		<AimLabsDirectory Condition="'$(AimLabsDirectory)' == ''">
+			C:/Program Files (x86)/Steam/steamapps/common/Aim Lab
+		</AimLabsDirectory>
+
+		<Il2CppAssembliesDir>
+			$(AimLabsDirectory)/MelonLoader/Il2CppAssemblies
+		</Il2CppAssembliesDir>
+
+		<NoWarn>$(NoWarn);NU1603;NU1701</NoWarn>
+
+		<SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>$(Il2CppAssembliesDir)/Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Examples.Genuine.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppACTk.Examples.Genuine.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Examples.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppACTk.Examples.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppACTk.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppACTk.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Analytics">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Avro.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Avro.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Build">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Build.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Common">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Content.GraphQL">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Content.GraphQL.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Content.ScreenTransitions">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Content.ScreenTransitions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.ContentDelivery.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.ContentDelivery.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Contentful.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Contentful.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimlab.CrashReportHandler">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimlab.CrashReportHandler.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Database">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Database.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Debugging.Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Debugging.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.EasyMovieTexture">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.EasyMovieTexture.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Economy">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Economy.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.GraphQL.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL.Tests">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.GraphQL.Tests.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.GraphQL.Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.GraphQL.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Localization">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Logging">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Logging.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Login">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Login.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Bindings">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.MainMenu.Bindings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Data">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.MainMenu.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.MainMenu.Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.MainMenu.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Models">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Models.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Models.Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Models.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Platforms">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Platforms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Platforms.Steam">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Platforms.Steam.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Plugins">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.RemoteConfig.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.RemoteConfig.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.ROG">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.ROG.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Settings">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Settings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.Tools">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.Tools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.UI.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.UI.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAimLab.UI.WeaponDisplay.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAimLab.UI.WeaponDisplay.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAmplifyShaderEditor.Samples.BuiltIn">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAmplifyShaderEditor.Samples.BuiltIn.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAstarPathfindingProject">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAstarPathfindingProject.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAsyncAwaitUtil">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAsyncAwaitUtil.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAvro">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppAvro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBakeryRuntimeAssembly">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppBakeryRuntimeAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBitsplash.DataVisualizer.Core">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppBitsplash.DataVisualizer.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppChartAndGraph">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppChartAndGraph.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppColorPicker">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppColorPicker.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
+			<HintPath>$(Il2CppAssembliesDir)/Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppconstants">
+			<HintPath>$(Il2CppAssembliesDir)/Il2Cppconstants.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppContentful">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppContentful.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCreatorStudio.Events">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCreatorStudio.Events.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCsWorkshop">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCsWorkshop.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Bots">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Bots.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Forms">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Forms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_FpsGame">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_FpsGame.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_GameEngine">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_GameEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_LevelEditor">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_LevelEditor.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Models">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Models.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Player">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Player.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Security">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCS_Utilities">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppCS_Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppdataAcademyModel">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppdataAcademyModel.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppdataServicesCulture">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppdataServicesCulture.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDentedPixel.LeanTween">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppDentedPixel.LeanTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppdiscord.rpc.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2Cppdiscord.rpc.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTween">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppDOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTweenPro">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppDOTweenPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEasySave3">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppEasySave3.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppElringus.UnityGoogleDrive.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppElringus.UnityGoogleDrive.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEnhancedScroller">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppEnhancedScroller.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppGameTools">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppGameTools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppGraphAndChartUnityPlugin">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppGraphAndChartUnityPlugin.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppJWT">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppJWT.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppKlutch">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppKlutch.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLapinerTools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Steam.Shared">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLapinerTools.Steam.Shared.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Workshop.Data">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLapinerTools.Workshop.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLapinerTools.Workshop.UI">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLapinerTools.Workshop.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLastAbyss.SimpleGraphQL.Plugins">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLastAbyss.SimpleGraphQL.Plugins.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLastAbyss.SimpleGraphQL.Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLastAbyss.SimpleGraphQL.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TranslucentImage">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLeTai.TranslucentImage.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TrueShadow.Demo">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLeTai.TrueShadow.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLeTai.TrueShadow">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLeTai.TrueShadow.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLoadingScreenPro">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppLoadingScreenPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMathNet.Numerics">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppMathNet.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMessageHub">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppMessageHub.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMicrosoft.CSharp">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppMicrosoft.CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>$(Il2CppAssembliesDir)/Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOSA">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppOSA.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppP2T">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppP2T.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.ClipperLib">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPathfinding.ClipperLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Ionic.Zip.Reduced">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Poly2Tri">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPathfinding.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPlayFab">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPlayFab.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPoolingAssembly">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPoolingAssembly.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppProgressBarPro">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppProgressBarPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPurchasing.Common">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppPurchasing.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Core">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppRewired_Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Windows">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppRewired_Windows.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRewired_Windows_Functions">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppRewired_Windows_Functions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSegment.Analytics">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSegment.Analytics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSimpleSQL_Runtime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSimpleSQL_Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSonicBloom.Koreo">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSonicBloom.Koreo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSSM">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSSM.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.CodeDom">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.CodeDom.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Drawing">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Drawing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.IO.Compression.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Net.Http">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Net.Http.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Windows.Forms">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Windows.Forms.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CpptaskModels">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CpptaskModels.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTNRD.Humanizr">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppTNRD.Humanizr.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppToucanSystems.SmartChart">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppToucanSystems.SmartChart.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUFPSGameProfile">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppUFPSGameProfile.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUIEffect">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppUIEffect.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUIShapes">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppUIShapes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWebViewRuntime">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWebViewRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Common">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshop.Common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Platform">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshop.Platform.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop.Steam">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshop.Steam.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshopCache">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshopCache.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshopCache.LookupTables">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshopCache.LookupTables.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppWorkshop_Content">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppWorkshop_Content.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppYoutubePlayer">
+			<HintPath>$(Il2CppAssembliesDir)/Il2CppYoutubePlayer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>$(Il2CppAssembliesDir)/Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InternalAPIEngineBridge.003">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.InternalAPIEngineBridge.003.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.ProBuilder.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.KdTree">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.ProBuilder.KdTree.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ProBuilder.Poly2Tri">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.ProBuilder.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Configuration">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Device">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Device.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Environments.Internal">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Environments.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Internal">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Internal.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Registration">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Registration.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Scheduler">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Scheduler.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Telemetry">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Telemetry.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Services.Core.Threading">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Services.Core.Threading.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VectorGraphics">
+			<HintPath>$(Il2CppAssembliesDir)/Unity.VectorGraphics.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleCore">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.AppleCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleMacosStub">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.AppleMacosStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.AppleStub">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.AppleStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.SecurityCore">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.SecurityStub">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.Stores">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.Stores.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.WinRTCore">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.WinRTCore.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Purchasing.WinRTStub">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.Purchasing.WinRTStub.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>$(Il2CppAssembliesDir)/UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityGoogleDrive.Newtonsoft.Json">
+			<HintPath>$(Il2CppAssembliesDir)/UnityGoogleDrive.Newtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="UnitySceneReference">
+			<HintPath>$(Il2CppAssembliesDir)/UnitySceneReference.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityUIExtensions">
+			<HintPath>$(Il2CppAssembliesDir)/UnityUIExtensions.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="LavaGang.MelonLoader" Version="0.7.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+		<Compile Include="UnlockPatch.cs" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="Exists('$(AimLabsDirectory)/Mods')">
+		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(AimLabsDirectory)/Mods" />
+	</Target>
+</Project>
