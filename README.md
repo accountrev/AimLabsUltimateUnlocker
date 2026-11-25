@@ -1,12 +1,12 @@
-# AimLabsUltimateUnlocker (for AimLabs 2.0)
+# AimLabsUltimateUnlocker (for AimLabs 2.1.1.1)
 <img width="1145" height="99" alt="image" src="https://github.com/user-attachments/assets/732bb829-13b5-462c-8352-3f5c267c06d2" />
 A Unity mod for AimLabs that enables AimLabs Pro (previously AimLabs+) subscription for free, unlocks paid skins, and more.
 
 Players shouldn't have to pay just to improve.
 
-Working on AimLabs version 2.0.2-8213. May work for newer versions.
+Working on AimLabs version 2.1.1.1-8409. May work for newer versions.
 
-Only usable with MelonLoader 0.7.3 or newer.
+Only usable with MelonLoader 0.7.4 or newer. Activate nightly builds if 0.7.4 not out yet when using MelonLoader Installer.
 
 [Link to the MelonLoader Installer](https://github.com/LavaGang/MelonLoader/releases/latest)
 
@@ -29,15 +29,15 @@ Also included with the mod are some unreleased features/content currently in the
    		* Profile pictures
      	* Banners
       	* Any item that is [unreleased/hidden](unreleased_and_hidden_content_2.0.2.txt) (see section below)  
-	* If you believe there is an item you want and it's missing, create an Issue explaining so.
+	* If you believe there is an item you want and it's missing, create an Issue explaining so or contact me on Discord.
 * Valorant Training Center Freeplay and Analysis
 * Valorant Training Center modifiers (Crosshair Placement, Movement Accuracy, Peek Efficiency)
 * Shot Vision
 * Sensitivity Finder
 * Pro Training Programs and Guides
-* Task Tuning
-* Pro Metrics (after finishing a task)
-* Adaptive Tasks
+* Pro Metrics after finishing a task
+	* Includes new Flick Anatomy for 2.1
+* Personalized Difficulty (aka Adaptive Tasks)
 * 50% off when buying Credits
 * AimLabs Pro Chat
 
@@ -88,6 +88,9 @@ This is usually done by running the game once for them to generate.
 Everything is configured for you to use and build except AimLabsDirectory.props, where you will need to point the path to your game.
 
 Once done, build by running **dotnet build**.
+
+## Issues?
+If there is an issue with the mod, create a new Issue under this repo or contact me directly on Discord @accountrev.
 
 ## Images
 <img width="1920" height="899" alt="image" src="https://github.com/user-attachments/assets/df681fda-d972-42c9-b75b-adee36d62436" />
