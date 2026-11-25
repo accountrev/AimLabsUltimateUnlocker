@@ -6,7 +6,7 @@ Players shouldn't have to pay just to improve.
 
 Working on AimLabs version 2.1.1.1-8409. May work for newer versions.
 
-Only usable with MelonLoader 0.7.4 or newer. Activate nightly builds if 0.7.4 not out yet when using MelonLoader Installer.
+Only usable with MelonLoader v0.7.4-ci.2673 Open-Beta or newer. To get version, enable "Nightly builds" in the MelonLoader Installer if 0.7.4 is not out yet.
 
 [Link to the MelonLoader Installer](https://github.com/LavaGang/MelonLoader/releases/latest)
 
