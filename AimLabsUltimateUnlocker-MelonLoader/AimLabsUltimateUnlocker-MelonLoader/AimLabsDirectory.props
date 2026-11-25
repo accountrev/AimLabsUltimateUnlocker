@@ -1,8 +1,6 @@
 <Project>
 	<PropertyGroup>
-		<AimLabDirectory>
-			<!-- Change me to the right AimLabs directory! -->
-			C:/YOUR/PATH/TO/AIM/LABS/HERE
-		</AimLabDirectory>
+		<!-- Change me to the right AimLabs directory! -->
+		<AimLabsDirectory>/C:/YOUR/PATH/TO/AIM/LABS/HERE</AimLabsDirectory>
 	</PropertyGroup>
 </Project>
